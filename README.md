@@ -52,3 +52,22 @@ App.component.ts should look like this
     }
   ];
   public labels = [];
+
+
+# Process
+0 . Check the API on https://ajax-course.herokuapp.com/messages/1
+1 . Create a service for the message that will do the get request on a speciofic roomId
+2 . Create the component that will show the messages
+3 . How can it be acccess ? Routing... Choose a way to access that list of messages.
+  Maybe... when i click on a room... I will see that specific room messages..
+  in Order to do this I need to create a routerLink that points to the messages/:roomId
+  This routin should be also mocified inside the app-routing module
+4. In the component, retried the id from the URL because is contains the roomId
+5. In the component call the message service with the proviously retrieved roomId
+6. The result is an array of messages that need to be shown...
+7. in the HTML using *ngFor...
+
+# [At home for tomorrow] Handle the sending of a new message...
+Access the hash from the user service... maybe you need to store it (in the service)
+Create a form that when submitted, launch a post request to https://ajax-course.herokuapp.com/messages/ + roomId
+Refresh the views of the messages (every seconds)
