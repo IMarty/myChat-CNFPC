@@ -22,12 +22,13 @@ export class SignupPage implements OnInit {
       console.log(response);
       if (response.status == 1) {
         // it was a success
+        // store the hash...
       } else {
         const toast = await this.toastController.create({
           message: response.data,
           duration: 2000
         })
-        toast.present();;
+        toast.present();
       }
     })
   }

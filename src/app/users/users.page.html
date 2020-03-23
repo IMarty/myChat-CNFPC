@@ -5,8 +5,11 @@
 </ion-header>
 
 <ion-content>
+
   <ion-button [routerLink]="['/signup']">Sign Up</ion-button>
-  <ion-button>Log In</ion-button>
+  <!-- Exercice : Create the Log In part before 16h00 -->
+  <ion-button [routerLink]="['/login']">Log In</ion-button>
+
   <ion-list>
     <ion-item *ngFor="let user of usersArray">
       <ion-avatar slot="start">
