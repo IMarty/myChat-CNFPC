@@ -13,4 +13,11 @@ export class RoomService {
     return this.http.get(this.baseUrl + '/rooms')
   }
 
+  addRoom(name) {
+    const data = {
+      roomName: name
+    }
+    return this.http.post(this.baseUrl + '/rooms', data);
+  }
+
 }
