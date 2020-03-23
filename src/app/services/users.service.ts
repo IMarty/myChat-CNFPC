@@ -10,4 +10,19 @@ export class UsersService {
   getUsers() {
     return this.http.get(this.baseUrl + '/users')
   }
+  signUp(usernameProvided, passwordProvided, imageProvided) {
+    const data = {
+      'username': usernameProvided,
+      'password': passwordProvided,
+      'image': imageProvided
+    }
+    return this.http.post(this.baseUrl + '/users', data);
+  }
+  logIn(usernameProvided, passwordProvided) {
+    const data = {
+      'username': usernameProvided,
+      'password': passwordProvided,
+    }
+    return this.http.post(this.baseUrl + '/users', data);
+  }
 }
