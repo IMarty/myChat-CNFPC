@@ -54,9 +54,9 @@ App.component.ts should look like this
   public labels = [];
 
 
-# Process
+# [Expected at 16h50] Process
 0 . Check the API on https://ajax-course.herokuapp.com/messages/1
-1 . Create a service for the message that will do the get request on a speciofic roomId
+1 . Create a service for the messages that will do the get request on a specific roomId
 2 . Create the component that will show the messages
 3 . How can it be acccess ? Routing... Choose a way to access that list of messages.
   Maybe... when i click on a room... I will see that specific room messages..
