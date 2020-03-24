@@ -6,7 +6,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UsersService {
   baseUrl = "https://ajax-course.herokuapp.com";
+
+  private userHash;
+
   constructor(private http: HttpClient) { }
+
   getUsers() {
     return this.http.get(this.baseUrl + '/users')
   }
@@ -28,4 +32,11 @@ export class UsersService {
     return this.http.post(this.baseUrl + '/users', data);
   }
 
+  setUserHash(hash) {
+    this.userHash = hash;
+  }
+
+  getUserHash() {
+    return this.userHash;
+  }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../services/users.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ import { UsersService } from '../services/users.service';
 export class LoginPage implements OnInit {
   username = '';
   password = '';
-  constructor(private us: UsersService) { }
+  constructor(private us: UsersService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -18,6 +19,10 @@ export class LoginPage implements OnInit {
       console.log(response);
       if (response.status == 1) {
         //everything is good
+        //store the hash
+        this.us.setUserHash(response.data.hash);
+        // redirect the user to the rooms pages
+        this.router.navigate(['/rooms']);
       } else {
         alert(response.data);
       }
