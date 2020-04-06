@@ -48,5 +48,6 @@ export class MessagesPage implements OnInit {
   getUserPicture(providedId) {
     // Array function is the best / avoid loops
     return this.userArray.find(user => user.id == providedId).picture;
+    // if it doesnot find the user ... if call a reload of the user array
   }
 }

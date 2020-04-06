@@ -20,7 +20,7 @@
     <ion-list>
       <ion-item *ngFor="let mess of messagesArray">
         <ion-avatar slot="start">
-          <img src="{{ getUserPicture(mess.userId) }}">
+          <img alt='User Picture' src="{{ getUserPicture(mess.userId) }}">
         </ion-avatar>
         <ion-label>
           {{mess.message}}
